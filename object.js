@@ -39,3 +39,52 @@ console.log(user2);
 //  age: 30,
 //  city: "Mumbai"
 //}
+
+//Example of Object.freeze()
+const user = {
+  name: "Altaf",
+  age: 30
+};
+
+Object.freeze(user);
+
+user.name = "Ahmed"; // Ignored
+user.city = "Mumbai"; // Ignored
+delete user.age; // Ignored
+
+console.log(user);
+
+//Output:
+
+//{
+ // name: "Altaf",
+ // age: 30
+//}
+//Without Object.freeze()
+const user5 = {
+  name: "Altaf"
+};
+
+user5.name = "Ahmed";
+user5.city = "Mumbai";
+
+console.log(user5);
+
+//Output:
+
+//{
+//  name: "Ahmed",
+//  city: "Mumbai"
+//}
+//Check if an object is frozen
+const user6 = {
+  name: "Altaf"
+};
+
+Object.freeze(user6);
+
+console.log(Object.isFrozen(user6));
+
+//Output:
+
+//true
