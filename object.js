@@ -145,3 +145,46 @@ var obj3 = { ...obj1, ...obj2 };
 console.log(obj3) //{ '1': 'a', '2': 'b', '3': 'c', '4': 'd' }
 
 console.log(obj3); //{ '1': 'a', '2': 'b', '3': 'c', '4': 'd' }
+
+
+//In JavaScript, the standard way to retrieve and log the keys of an object is by using the Object.keys() method. This method returns an array containing all the property names (keys) of the object.
+
+//Here is a complete example:
+
+//JavaScript
+// 1. Create an object
+const userProfile = {
+  name: "Alice",
+  age: 28,
+  role: "Software Developer",
+  isActive: true
+};
+
+// 2. Get the keys using Object.keys()
+const keysArray = Object.keys(userProfile);
+
+// 3. Console log the array of keys
+console.log(keysArray);
+//Console Output:
+
+//Plaintext
+//[ 'name', 'age', 'role', 'isActive' ]
+//Logging Keys One by One
+//If your goal is to log each key individually rather than as a single array, you can combine Object.keys() with a forEach loop:
+
+//JavaScript
+const userProfile1 = {
+  name: "Alice",
+  age: 28,
+  role: "Software Developer"
+};
+
+Object.keys(userProfile1).forEach(key => {
+  console.log("Key:", key);
+});
+//Console Output:
+
+//Plaintext
+//Key: name
+//Key: age
+//Key: role
