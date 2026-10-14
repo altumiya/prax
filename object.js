@@ -41,18 +41,18 @@ console.log(user2);
 //}
 
 //Example of Object.freeze()
-const user = {
+const frozenUser = {
   name: "Altaf",
   age: 30
 };
 
-Object.freeze(user);
+Object.freeze(frozenUser);
 
-user.name = "Ahmed"; // Ignored
-user.city = "Mumbai"; // Ignored
-delete user.age; // Ignored
+frozenUser.name = "Ahmed"; // Ignored
+frozenUser.city = "Mumbai"; // Ignored
+delete frozenUser.age; // Ignored
 
-console.log(user);
+console.log(frozenUser);
 
 //Output:
 
@@ -149,9 +149,6 @@ console.log(obj3); //{ '1': 'a', '2': 'b', '3': 'c', '4': 'd' }
 
 //In JavaScript, the standard way to retrieve and log the keys of an object is by using the Object.keys() method. This method returns an array containing all the property names (keys) of the object.
 
-//Here is a complete example:
-
-//JavaScript
 // 1. Create an object
 const userProfile = {
   name: "Alice",
@@ -167,12 +164,10 @@ const keysArray = Object.keys(userProfile);
 console.log(keysArray);
 //Console Output:
 
-//Plaintext
 //[ 'name', 'age', 'role', 'isActive' ]
 //Logging Keys One by One
 //If your goal is to log each key individually rather than as a single array, you can combine Object.keys() with a forEach loop:
 
-//JavaScript
 const userProfile1 = {
   name: "Alice",
   age: 28,
@@ -184,7 +179,37 @@ Object.keys(userProfile1).forEach(key => {
 });
 //Console Output:
 
-//Plaintext
 //Key: name
 //Key: age
 //Key: role
+
+// Object Destructuring
+//Instead of accessing properties one by one (e.g., user.name, user.age), you can unpack them directly.
+
+const userDetails = {
+  name: "John",
+  age: 32,
+  city: "Mumbai"
+};
+
+// Destructuring the object
+const { name, age, city } = userDetails;
+
+console.log(name); // Output: "John"
+console.log(age);  // Output: 32
+console.log(city); // Output: "Mumbai"
+//Advanced Object Destructuring
+//You can also assign default values or rename the variables while destructuring:
+
+const laptop = {
+  brand: "Dell",
+  model: "XPS 15"
+};
+
+// 'brand' is renamed to 'manufacturer'
+// 'ram' doesn't exist, so it falls back to the default value of "16GB"
+const { brand: manufacturer, model, ram = "16GB" } = laptop;
+
+console.log(manufacturer); // Output: "Dell"
+console.log(ram);          // Output: "16GB"
+

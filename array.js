@@ -40,3 +40,25 @@ const score1 = 100
 const score2 = 200
 const score3 = 300
 console.log(Array.of(score1,score2,score3))
+
+// Array Destructuring
+//Array destructuring pulls out values based on their position (index) in the array.
+
+
+const colors = ["Red", "Green", "Blue", "Yellow"];
+
+// Destructuring the array
+const [firstColor, secondColor] = colors;
+
+console.log(firstColor);  // Output: "Red"
+console.log(secondColor); // Output: "Green"
+//Skipping Elements in Arrays
+//If you want the first and third elements but don't care about the second, you can leave a blank space using commas:
+
+const scores = [100, 85, 92, 78];
+
+// Skipping the second element (85)
+const [firstScore, , thirdScore] = scores;
+
+console.log(firstScore); // Output: 100
+console.log(thirdScore); // Output: 92
