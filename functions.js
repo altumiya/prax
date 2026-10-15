@@ -7,3 +7,32 @@ console.log(result)
 (function (name){
   console.log(`Hello , ${name}`);
 })("Altaf");
+
+const user={
+    username:"altaf",
+    price:999,
+    welcomemsg : function(){
+        console.log(`${this.username}, welcome to world`) //altaf, welcome to world
+    }
+}
+user.welcomemsg()
+console.log(this) // {}
+
+const one= ()=>{
+    console.log(this) //{}
+}
+one()
+
+const add= (num1, num2)=>{
+    return num1 + num2
+    
+}
+console.log(add(2,4)) //6
+
+const add1= (num1, num2)=> num1 + num2
+    
+console.log(add1(3,4)) //7
+
+const add3= (num1, num2)=> ({username:"altaf"})
+    
+console.log(add3(3,4))   //{ username: 'altaf' } The parentheses around { username: "altaf" } tell JavaScript to treat it as an object literal and return it from the arrow function:
