@@ -62,3 +62,22 @@ const [firstScore, , thirdScore] = scores;
 
 console.log(firstScore); // Output: 100
 console.log(thirdScore); // Output: 92
+
+//reverse an array
+let data = [2,4,7,90,32,54]
+function reversedata(){
+    let revfinal = []
+    for(let i = data.length-1; i>=0;i--){
+    revfinal.push(data[i]) 
+    }
+   return revfinal 
+}
+let newdata = reversedata(data)
+console.log(newdata)
+
+// inbuilt method to reverse an array
+let data1 = [2, 4, 7, 90, 32, 54];
+
+let newdata1 = data1.reverse();
+
+console.log(newdata1);
