@@ -5,3 +5,11 @@ for (let i=1; i<=10 ; i++){
     }
     
 }
+
+for (let i=1; i<=20 ; i++){
+   if (i==5){
+    console.log(`detected 5`)
+    continue  //skips 5 as continue method is used to skips conditions
+   }
+   console.log(`value of i is ${i}`) 
+}
