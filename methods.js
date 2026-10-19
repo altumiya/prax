@@ -21,3 +21,13 @@ const newnums1 = mynums1.map((nums)=>nums + 10 )
                       .map((nums)=> nums**2)
                       .filter((nums)=> nums >=200)
 console.log(newnums1)
+
+
+const mynums2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const initial = 0;
+const newnums2 = mynums2.reduce((a, c) => {
+    console.log(`a : ${a} and c : ${c}`);
+    return a + c; 
+}, initial);
+
+console.log(newnums2);
