@@ -31,3 +31,25 @@ const newnums2 = mynums2.reduce((a, c) => {
 }, initial);
 
 console.log(newnums2);
+
+
+const cart = [
+    {
+        itemname : "soap",
+        price : 400
+    },
+     {
+        itemname : "oil",
+        price : 700
+    },
+     {
+        itemname : "sapionin",
+        price : 300
+    },
+     {
+        itemname : "ghee",
+        price : 1400
+    }
+];
+const finalt =cart.reduce((acc,item)=>acc + item.price,0)
+console.log(finalt)
