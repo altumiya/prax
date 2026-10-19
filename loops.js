@@ -24,7 +24,7 @@ while (index<=10){
 
 //do while loop example
 
-let score = 1
+let score = 1  // if score is 11 it will print 11 only due to while condition
 do{
     console.log(`score is ${score}`)
       score ++
