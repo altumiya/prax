@@ -12,3 +12,12 @@ const newnums = mynum.filter((num)=>{
     return num >4
 })
 console.log(newnums)
+
+const mynums1 = [1,2,3,4,5,6,7,8,9]
+const newnums1 = mynums1.map((nums)=>nums + 10 )
+                      .map((nums)=>nums - 1)
+                      .map((nums)=> nums / 4)
+                      .map((nums)=> nums * 5)
+                      .map((nums)=> nums**2)
+                      .filter((nums)=> nums >=200)
+console.log(newnums1)
