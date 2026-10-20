@@ -84,3 +84,23 @@ const number1 = mydata.filter((item) => typeof item === "number");
 
 console.log(string1); // ["a", "b", "c", "altaf"]
 console.log(number1); // [1, 2, 3]
+
+// function currying and closure example
+
+function sum(a) {
+  let total = a;
+
+  function inner(b) {
+    if (b === undefined) {
+      return total;
+    }
+
+    total += b;
+    return inner;
+  }
+
+  return inner;
+}
+
+console.log(sum(1)(2)(3)(4)()); // 10
+console.log(sum(5)(10)());      // 15
