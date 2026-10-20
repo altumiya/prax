@@ -53,3 +53,24 @@ const cart = [
 ];
 const finalt =cart.reduce((acc,item)=>acc + item.price,0)
 console.log(finalt)
+
+const mydata = ["a", 1, "b", 2, 3, "c", "altaf"];
+
+function mytype(data) {
+  const string = [];
+  const number = [];
+
+  for (const item of data) {
+    if (typeof item === "string") {
+      string.push(item);
+    } else {
+      number.push(item);
+    }
+  }
+
+  return { string, number };
+}
+
+const { string, number } = mytype(mydata);
+console.log(string); // ["a", "b", "c", "altaf"]
+console.log(number); // [1, 2, 3]
