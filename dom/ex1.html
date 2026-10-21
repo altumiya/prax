@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation Example</title>
+</head>
+<body style="background-color: #212121; color: #fff; font-family: sans-serif; padding: 20px;">
+
+    <h2>Programming Languages</h2>
+    <!-- Target list container -->
+    <ul class="language"></ul>
+
+    <script>
+        // 1. Add a language using textContent
+        function addlanguage(langname) {
+            const li = document.createElement("li");
+            li.textContent = langname;
+            document.querySelector('.language').appendChild(li);
+        }
+        addlanguage('python');  // 1st child: python
+        addlanguage("react");   // 2nd child: react
+        addlanguage("c++");     // 3rd child: c++
+
+        // 2. Optimized approach using createTextNode (avoids innerHTML parsing overhead)
+        function addoptilang(langname) {
+            const li = document.createElement("li");
+            li.appendChild(document.createTextNode(langname));
+            document.querySelector('.language').appendChild(li);
+        }
+        addoptilang("ruby");    // 4th child: ruby
+
+        // List state at this point:
+        // 1. python
+        // 2. react
+        // 3. c++
+        // 4. ruby
+
+        // 3. Replace the 2nd child ("react") with "mojo"
+        const secondLang = document.querySelector("li:nth-child(2)");
+        const newli = document.createElement('li');
+        newli.textContent = "mojo";
+        secondLang.replaceWith(newli);
+
+        // 4. Replace the 1st child ("python") with "typescript" using outerHTML
+        const firstlang = document.querySelector("li:first-child");
+        firstlang.outerHTML = "<li>typescript</li>";
+
+        // 5. Remove the last child ("ruby")
+        const lastlang = document.querySelector("li:last-child");
+        lastlang.remove();
+    </script>
+</body>
+</html>
