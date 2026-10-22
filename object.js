@@ -213,3 +213,17 @@ const { brand: manufacturer, model, ram = "16GB" } = laptop;
 console.log(manufacturer); // Output: "Dell"
 console.log(ram);          // Output: "16GB"
 
+let obj11 = {
+    name:"altaf",
+    age:32,
+    isNaN: false
+
+}
+let obj21 = {
+    comp: "ibm",
+    exp:"3 years"
+}
+let obj3 = {...obj11, ...obj21};
+
+console.log(obj3);
+//When you combine objects using {...obj1, ...obj2}, the last object's value wins if both objects have the same key.

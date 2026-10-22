@@ -80,6 +80,8 @@
 <body>
 
   <h1 id="title">Click Me or Press Start</h1>
+  <h4 id="title2">this is example of changing background color with text color by using DOM.<br/> if want to use class instaed of id take use of foreach loop otherwise id is unique so have to be called everytime!!</h4>
+
   <div id="currentTime"></div>
 
   <div class="btn-container">
@@ -114,6 +116,8 @@
         intervalId = setInterval(function () {
           document.body.style.backgroundColor = randomcolor();
           document.querySelector('#title').style.color = randomcolor();
+          document.querySelector('#title2').style.color = randomcolor();
+
         }, 1000);
       }
     };
@@ -127,6 +131,8 @@
     document.querySelector('#start').addEventListener('click', startchaingingcolor);
     document.querySelector('#stop').addEventListener('click', stopchaingingcolor);
     document.querySelector('#title').addEventListener('click', startchaingingcolor);
+    document.querySelector('#title2').addEventListener('click', startchaingingcolor);
+
   </script>
 
 </body>
