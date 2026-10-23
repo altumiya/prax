@@ -36,3 +36,11 @@ console.log(add1(3,4)) //7
 const add3= (num1, num2)=> ({username:"altaf"})
     
 console.log(add3(3,4))   //{ username: 'altaf' } The parentheses around { username: "altaf" } tell JavaScript to treat it as an object literal and return it from the arrow function:
+
+function  multipleby5(num){
+    return num*5
+}
+multipleby5.power =2
+console.log(multipleby5(5)) //25
+console.log(multipleby5.power) //2
+console.log(multipleby5.prototype) //{}
