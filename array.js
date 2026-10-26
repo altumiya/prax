@@ -81,3 +81,26 @@ let data1 = [2, 4, 7, 90, 32, 54];
 let newdata1 = data1.reverse();
 
 console.log(newdata1);
+
+//memory based 
+
+a = [1,2,3,4,5]
+b = a;
+b[3]=8;
+console.log(a)
+console.log(b)
+
+let a1 = [1, 2, 3, 4, 5];
+
+let b1 = [...a1];
+
+b1[3] = 8;
+
+console.log(a1); // [1, 2, 3, 4, 5]
+console.log(b1); // [1, 2, 3, 8, 5]
+
+a2 = [1,2,3,4,5]
+b2 = a2;
+a2[3]=8;
+console.log(a2)
+console.log(b2)
