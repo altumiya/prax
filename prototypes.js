@@ -69,3 +69,21 @@ const altaf = new teacher("altu", "altaf@g.com","12345" )
 altaf.addcourses()
 const altumiya = new user("altumiya")
 altumiya.logme()
+
+class user{
+    constructor(username, email, password){
+        this.username = username
+        this.email = email
+        this.password = password
+    }
+    encryptpassword(){
+        return `${this.password}abc`
+    }
+    changeusername(){
+        return `${this.username.toUpperCase()}`
+
+    }
+}
+const altaf3 = new user("altu", "altaf@g.com", 1234)
+console.log(altaf3.encryptpassword())
+console.log(altaf3.changeusername())
