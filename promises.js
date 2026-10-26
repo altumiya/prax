@@ -7,3 +7,13 @@ const promiseone = new Promise (function(resolve, reject){
 promiseone.then(function(){
     console.log('task is completed')
 })
+
+const promise3 =new Promise (function(resolve, reject){
+    setTimeout(function(){
+        console.log("async2 is completed");
+        resolve({user : "altaf" , email : "altaf@g.com"})
+    },2000)
+})
+promise3.then(function(user){
+   console.log(user)
+})
