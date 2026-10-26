@@ -44,33 +44,3 @@ multipleby5.power =2
 console.log(multipleby5(5)) //25
 console.log(multipleby5.power) //2
 console.log(multipleby5.prototype) //{}
-
-function createuser(username, score, year = "not provided"){
-  this.username = username
-  this.score = score
-  this.year = year
-}
-createuser.prototype.increment = function(){
-    this.score++
-}
-createuser.prototype.printme = function(){
-    console.log(`score is  ${this.score}`)
-    console.log(`year is  ${this.year}`)
-}
-const altaf = new createuser("altaf", 25, 1994)
-const altu = new createuser("altumiya",25, 1994) 
-altaf.printme() //score is  25 ... year is  1994
-altu.printme() //score is  25 ... year is  1994
-
-function Setusername(username){
-  this.username = username
-}
-function createuser(username , email, password){
-    Setusername.call(this ,username) //Calls a method of an object, substituting another object for the current object.
-    this.email = email
-    this.password = password
-}
-const altaf1 = new createuser ("altaf", 'altaf@g.com', "1234" )
-const altu1 = new createuser("altu","altz@g.com", "2345")
-console.log(altaf1)
-console.log(altu1)
