@@ -87,3 +87,20 @@ class user{
 const altaf3 = new user("altu", "altaf@g.com", 1234)
 console.log(altaf3.encryptpassword())
 console.log(altaf3.changeusername())
+
+class user{
+    constructor( email, password){
+        
+        this.email = email
+        this.password = password
+    }
+    get password(){
+        //return this._password.toUpperCase()
+        return `${this._password}altu`
+    }
+    set password(value){
+         this._password = value
+    }
+}
+const altaf = new user( "altaf@g.com", "abc")
+console.log(altaf.password)
