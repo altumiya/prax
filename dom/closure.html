@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello, World!</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <button id="orange">orange</button>
+    <button id="green">green</button>
+    <script>
+      function clickhandler(color) {
+        return function () {
+          document.body.style.backgroundColor = color;
+        };
+      }
+
+      document.getElementById('orange').onclick = clickhandler('orange');
+      document.getElementById('green').onclick = clickhandler('green');
+    </script>
+  </body>
+</html>
