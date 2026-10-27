@@ -56,3 +56,21 @@ function outer(){
     console.log("outer", username) //outer altaf
 }
 outer()
+
+//closure eg 
+function outer(){
+    let username ="altaf"
+    let secret = "mysec"
+    function inner(){
+        
+        console.log("inner", username) // inner altaf
+    }
+    function inner2(){
+        console.log("inner2", username) // inner2 altaf
+        console.log(secret) // mysec
+    }
+    inner()
+    inner2()
+    console.log("outer", username) // outer altaf
+}
+outer()
