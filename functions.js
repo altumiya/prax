@@ -44,3 +44,15 @@ multipleby5.power =2
 console.log(multipleby5(5)) //25
 console.log(multipleby5.power) //2
 console.log(multipleby5.prototype) //{}
+
+
+// lexical scope eg
+function outer(){
+    let username ="altaf";
+    function inner(){
+        console.log("inner", username) //inner altaf
+    }
+    inner()
+    console.log("outer", username) //outer altaf
+}
+outer()
