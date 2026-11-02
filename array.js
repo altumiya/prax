@@ -104,3 +104,21 @@ b2 = a2;
 a2[3]=8;
 console.log(a2)
 console.log(b2)
+
+// set method to filter
+let arr = [1, 2, 3, 2, 4, 5, 3];
+
+let seen = new Set();
+let repeated = new Set();
+
+for (let num of arr) {
+
+    if (seen.has(num)) {
+        repeated.add(num);
+    } else {
+        seen.add(num);
+    }
+
+}
+
+console.log([...repeated]); // [2, 3]
