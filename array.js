@@ -123,6 +123,8 @@ for (let num of arr) {
 
 console.log([...repeated]); // [2, 3]
 
+
+
 let arr6 = [1, 2, 3, 2, 4, 5, 3, 6];
 
 let repeatedd = arr6.filter((num, index) => {
