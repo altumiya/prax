@@ -15,3 +15,6 @@ let now = new Date();
 
 console.log(now);
 console.log(now.toLocaleString());
+console.log(+True) //1
+console.log(True+) // error
+console.log(+ "") // 0
