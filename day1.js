@@ -33,3 +33,38 @@ const cities = ["Mumbai", "Delhi", "Bengaluru", "Chennai"];
 let state;  //give undefine
 
 console.table([cities, state]);
+
+let score = '33abc'  //if null than console show 0
+let valueinnum = Number(score)
+console.log(typeof valueinnum) // Number 
+console.log(valueinnum) //NaN same as in undefined
+
+let loggin = "altaf" || 1  // if "" than false
+let boollogin = Boolean(loggin)
+console.log(boollogin) // true
+
+// null is a standalone "empty" value that JS converts to 0 in relational comparisons (making null >= 0 true), 
+// but not in equality checks (making null == 0 false).
+
+// typeof bigint returns "undefined" because lowercase `bigint` is treated as an undeclared variable—
+// use a BigInt value like `typeof 10n` ("bigint") or the constructor `typeof BigInt` ("function") instead.
+
+// stack for primitive and heap for non primitive memory use
+// stack give copy and heap give reference
+
+// stack example
+let user1 = "altaf"
+let user2 = user1
+user2 = "altumiya"
+console.log(user1)
+console.log(user2) // so copy of user1 changed to altumiya 
+
+// heap example as refrence also changed
+let userone = {
+    email: "altaf@eg.com",
+    password : 12345
+}
+let usertwo = userone
+usertwo.email = "altumiya@eg.com";
+console.log(usertwo) //{ email: 'altumiya@eg.com', password: 12345 }
+console.log(userone) //{ email: 'altumiya@eg.com', password: 12345 }
