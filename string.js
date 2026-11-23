@@ -122,3 +122,18 @@ const text = "   hello world   ";
 console.log(text.trim());      // "hello world" (both ends)
 console.log(text.trimStart()); // "hello world   " (start only)
 console.log(text.trimEnd());   // "   hello world" (end only)
+
+// replace() swaps only the first match. Use replaceAll() to swap every match.
+const sentence = "I like cats. Cats are great, and cats sleep a lot.";
+
+// 1. Replaces only the FIRST exact match (case-sensitive)
+console.log(sentence.replace("cats", "dogs"));
+// "I like dogs. Cats are great, and cats sleep a lot."
+
+// 2. Replaces ALL exact matches
+console.log(sentence.replaceAll("cats", "dogs"));
+// "I like dogs. Cats are great, and dogs sleep a lot."
+
+// 3. Case-insensitive replacement using regex (/gi = global + ignore case)
+console.log(sentence.replace(/cats/gi, "dogs"));
+// "I like dogs. dogs are great, and dogs sleep a lot."
