@@ -269,3 +269,23 @@ let result = developers_array.reduce((prev, curr)=>{
 }, {BE:[], FE:[]})
 
 console.log(result)  //{ BE: [ 'Jane', 'James' ], FE: [ 'John' ] }
+
+let users = [
+  {id: 'john', name: "John Smith", age: 20},
+  {id: 'ann', name: "Ann Smith", age: 24},
+  {id: 'pete', name: "Pete Peterson", age: 31},
+];
+
+let result = users.reduce((prev, curr)=>{
+  prev[curr.id]=curr;
+  // prev['ann']=curr;
+  
+  return prev
+}, {})
+
+console.log(result) // in one object 
+// {
+//   john: {id: 'john', name: "John Smith", age: 20},
+//   ann: {id: 'ann', name: "Ann Smith", age: 24},
+//   pete: {id: 'pete', name: "Pete Peterson", age: 31},
+// }
