@@ -137,3 +137,16 @@ console.log(sentence.replaceAll("cats", "dogs"));
 // 3. Case-insensitive replacement using regex (/gi = global + ignore case)
 console.log(sentence.replace(/cats/gi, "dogs"));
 // "I like dogs. dogs are great, and dogs sleep a lot."
+
+// includes() checks whether a string contains a specific substring (returning true or false)
+const sentence1 = "JavaScript is awesome";
+
+// 1. Basic check
+console.log(sentence1.includes("awesome")); // true
+console.log(sentence.includes("Python"));  // false
+
+// 2. Case-sensitive
+console.log(sentence1.includes("javascript")); // false ('j' !== 'J')
+
+// 3. Start searching from a specific index (second argument)
+console.log(sentence1.includes("Java", 5)); // false ("Java" is at index 0)
