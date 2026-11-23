@@ -23,3 +23,13 @@ console.log("\n--- 3. Negative Index ---");
 console.log("charAt(-1):", str.charAt(-1)); // ""
 console.log("str[-1]:", str[-1]);           // undefined
 console.log("at(-1):", str.at(-1));         // "o" (modern way to get the last character)
+
+// 4. Non-numeric index: charAt() converts invalid input to 0; [] returns undefined
+console.log("\n--- 4. Non-Numeric Index ---");
+console.log("charAt('abc'):", str.charAt("abc")); // "h" (treated as index 0)
+console.log("str['abc']:", str["abc"]);           // undefined
+
+// 5. Missing or undefined index: charAt() defaults to 0; [] returns undefined
+console.log("\n--- 5. Missing / Undefined Index ---");
+console.log("charAt():", str.charAt());             // "h" (defaults to index 0)
+console.log("str[undefined]:", str[undefined]);     // undefined
