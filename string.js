@@ -115,3 +115,10 @@ console.log(str3.substring(5, 0));  // "hello" (same as substring(0, 5))
 
 // 4. Negative numbers are treated as 0
 console.log(str3.substring(-3, 5)); // "hello" (same as substring(0, 5))
+
+// just remove white space
+const text = "   hello world   ";
+
+console.log(text.trim());      // "hello world" (both ends)
+console.log(text.trimStart()); // "hello world   " (start only)
+console.log(text.trimEnd());   // "   hello world" (end only)
