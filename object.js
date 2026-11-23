@@ -227,3 +227,45 @@ let obj3 = {...obj11, ...obj21};
 
 console.log(obj3);
 //When you combine objects using {...obj1, ...obj2}, the last object's value wins if both objects have the same key.
+
+let developers_array = [
+  {
+    first: "John",
+    last: "Doe",
+    dept: "FE",
+    commits: 10
+  },
+  {
+    first: "Jane",
+    last: "Doe",
+    dept: "BE",
+    commits: 15
+  },
+  {
+    first: "James",
+    last: "bond",
+    dept: "BE",
+    commits: 8
+  }
+]; 
+
+
+// {
+//   BE: ["Jane", "James"]
+//   FE: ["John"]
+// }
+
+let result = developers_array.reduce((prev, curr)=>{
+  if(curr.dept == "BE"){
+    prev[curr.dept].push(curr.first)
+  }else{
+    // prev.push(curr.first)
+    prev[curr.dept].push(curr.first)
+  
+  }
+  
+  
+  return prev
+}, {BE:[], FE:[]})
+
+console.log(result)  //{ BE: [ 'Jane', 'James' ], FE: [ 'John' ] }
