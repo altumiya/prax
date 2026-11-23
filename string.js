@@ -17,3 +17,9 @@ console.log("str[10]:", str[10]);           // undefined
 
 // An out-of-bounds index is a position that doesn't exist in a string or array—
 // either negative or greater than or equal to its length (for example, index 5 in "hello").
+
+// 3. Negative index: Neither charAt() nor [] supports negative indexing
+console.log("\n--- 3. Negative Index ---");
+console.log("charAt(-1):", str.charAt(-1)); // ""
+console.log("str[-1]:", str[-1]);           // undefined
+console.log("at(-1):", str.at(-1));         // "o" (modern way to get the last character)
