@@ -150,3 +150,18 @@ console.log(sentence1.includes("javascript")); // false ('j' !== 'J')
 
 // 3. Start searching from a specific index (second argument)
 console.log(sentence1.includes("Java", 5)); // false ("Java" is at index 0)
+
+// split() breaks a string into an array of substrings based on a separator.
+const text2 = "apple,banana,mango";
+
+// 1. Split by comma
+console.log(text2.split(","));      // ["apple", "banana", "mango"]
+
+// 2. Split by space (common for getting words)
+console.log("hello world js".split(" ")); // ["hello", "world", "js"]
+
+// 3. Split into individual characters (empty string separator)
+console.log("cat".split(""));      // ["c", "a", "t"]
+
+// 4. Limit the number of items returned (second argument)
+console.log(text2.split(",", 2));   // ["apple", "banana"]
