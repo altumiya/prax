@@ -64,3 +64,16 @@ WHEN TO USE WHICH:
      (e.g., `str.at(-1)` for the last character, `str.at(-2)` for second-to-last).
 
 */
+// str.at() example
+
+// Positive indexing (counts from the start, same as str[index])
+console.log(str.at(0));   // "h" (first character)
+console.log(str.at(1));   // "e" (second character)
+
+// Negative indexing (counts backwards from the end)
+console.log(str.at(-1));  // "o" (last character)
+console.log(str.at(-2));  // "l" (second-to-last character)
+
+// Out-of-bounds index (returns undefined)
+console.log(str.at(10));  // undefined
+console.log(str.at(-10)); // undefined
