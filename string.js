@@ -94,3 +94,24 @@ console.log(str1.indexOf("z"));     // -1
 
 // 4. Case-sensitive
 console.log(str1.indexOf("Hello")); // -1 ('H' !== 'h')
+
+// substring(start, end) extracts part of a string starting from start up to (but not including) end. 
+// It returns a new string and does not modify the original.
+// substring() vs slice(): Both work identically for positive indexes where start < end, 
+// but slice() supports negative indexes (counting from the end, e.g., str.slice(-5) gives "world") 
+// and does not swap arguments if start > end (it returns "" instead).
+
+const str3 = "hello world";
+
+// 1. Standard usage (start included, end excluded)
+console.log(str3.substring(0, 5));  // "hello" (indexes 0, 1, 2, 3, 4)
+console.log(str3.substring(6, 11)); // "world"
+
+// 2. Omit the end index — extracts till the end of the string
+console.log(str3.substring(6));     // "world"
+
+// 3. If start > end, JavaScript automatically swaps them
+console.log(str3.substring(5, 0));  // "hello" (same as substring(0, 5))
+
+// 4. Negative numbers are treated as 0
+console.log(str3.substring(-3, 5)); // "hello" (same as substring(0, 5))
