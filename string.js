@@ -77,3 +77,20 @@ console.log(str.at(-2));  // "l" (second-to-last character)
 // Out-of-bounds index (returns undefined)
 console.log(str.at(10));  // undefined
 console.log(str.at(-10)); // undefined
+
+// indexOf() returns the first position (index) where a specified character or substring is found in a string. 
+// If it's not found, it returns -1.
+const str1 = "hello world";
+
+// 1. Find the first occurrence of a character or word
+console.log(str1.indexOf("o"));     // 4 (first 'o' in "hello")
+console.log(str1.indexOf("world")); // 6 (starts at index 6)
+
+// 2. Start searching from a specific index (second argument)
+console.log(str1.indexOf("o", 5));  // 7 (skips index 4, finds 'o' in "world")
+
+// 3. Not found — returns -1
+console.log(str1.indexOf("z"));     // -1
+
+// 4. Case-sensitive
+console.log(str1.indexOf("Hello")); // -1 ('H' !== 'h')
