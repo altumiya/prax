@@ -289,3 +289,11 @@ console.log(result) // in one object
 //   ann: {id: 'ann', name: "Ann Smith", age: 24},
 //   pete: {id: 'pete', name: "Pete Peterson", age: 31},
 // }
+
+let john = { name: "John", age: 25 };
+let pete = { name: "Pete", age: 30 };
+let mary = { name: "Mary", age: 29 };
+let arr = [john, pete, mary];
+let averageAge = arr.reduce((sum, person) => sum + person.age, 0) / arr.length;
+
+console.log(averageAge); // 28
