@@ -60,3 +60,8 @@ const min = 10;
 const max = 20;
 const randomInRange = Math.floor(Math.random() * (max - min + 1)) + min;
 console.log(`Random (${min}-${max}):`, randomInRange); // e.g., 14
+
+// 5. Practical use: pick a random item from an array
+const colors = ["red", "green", "blue", "yellow"];
+const randomColor = colors[Math.floor(Math.random() * colors.length)];
+console.log("Random color:", randomColor); // e.g., "blue"
