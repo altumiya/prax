@@ -151,3 +151,11 @@ for (let i = 0; i < arrxor.length; i++) {
 }
 
 console.log(unique); // 4
+
+const scores = [45, 88, 12, 99, 64];
+// The spread operator (...) expands the array into separate arguments
+console.log("Max score:", Math.max(...scores)); // 99
+console.log("Min score:", Math.min(...scores)); // 12
+
+// Passing an array directly without (...) returns NaN
+console.log("Without spread:", Math.max(scores)); // NaN
