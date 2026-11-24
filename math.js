@@ -13,3 +13,9 @@ console.log(Math.abs(-4.7)); // 4.7
 console.log(Math.round(4.6));  // 5
 console.log(Math.round(4.4));  // 4
 console.log(Math.round(-4.5)); // -4
+
+// 4. Math.ceil(): Always rounds UP to the next whole number
+
+console.log(Math.ceil(4.1));  // 5
+console.log(Math.ceil(4.9));  // 5
+console.log(Math.ceil(-4.9)); // -4 (closer to 0 is higher)
