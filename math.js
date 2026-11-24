@@ -41,3 +41,14 @@ console.log(Math.max(-10, -25, -5));    // -5 (closest to 0 is largest)
 
 console.log(Math.min(10, 25, 5, 40));   // 5
 console.log(Math.min(-10, -25, -5));    // -25
+
+// 4. Edge cases
+console.log(Math.max()); // -Infinity (no arguments)
+console.log(Math.min()); // Infinity  (no arguments)
+console.log(Math.max(10, "abc")); // NaN (if any value cannot be converted to a number)
+
+// 1. Basic usage: random decimal between 0 (inclusive) and 1 (exclusive)
+console.log(Math.random()); // e.g., 0.738291045
+
+// 2. Random integer from 0 to 9
+console.log(Math.floor(Math.random() * 10)); // 0, 1, 2, ..., 9
