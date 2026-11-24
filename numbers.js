@@ -27,3 +27,9 @@ console.log(num.toPrecision()); // "123.456"
 
 // 6. Return type is ALWAYS a string
 console.log(typeof num.toPrecision(4)); // "string"
+
+// toLocaleString() formats a number (or Date) into a region-specific string—
+// most commonly used for adding commas, currency symbols, or formatting dates.
+const num2 = 1000000
+console.log(num2.toLocaleString('en-IN')) //10,00,000
+console.log(num2.toLocaleString("en-US")); // "1,000,000"
