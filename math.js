@@ -52,3 +52,11 @@ console.log(Math.random()); // e.g., 0.738291045
 
 // 2. Random integer from 0 to 9
 console.log(Math.floor(Math.random() * 10)); // 0, 1, 2, ..., 9
+// 3. Random integer from 1 to 10 (add 1 to shift the range)
+console.log(Math.floor(Math.random() * 10) + 1); // 1, 2, ..., 10
+
+// 4. Random integer between min and max (BOTH inclusive) — standard formula
+const min = 10;
+const max = 20;
+const randomInRange = Math.floor(Math.random() * (max - min + 1)) + min;
+console.log(`Random (${min}-${max}):`, randomInRange); // e.g., 14
