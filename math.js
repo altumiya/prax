@@ -19,3 +19,15 @@ console.log(Math.round(-4.5)); // -4
 console.log(Math.ceil(4.1));  // 5
 console.log(Math.ceil(4.9));  // 5
 console.log(Math.ceil(-4.9)); // -4 (closer to 0 is higher)
+
+// 5. Math.floor(): Always rounds DOWN to the previous whole number
+
+console.log(Math.floor(4.9));  // 4
+console.log(Math.floor(4.1));  // 4
+console.log(Math.floor(-4.1)); // -5 (further below 0 is lower)
+
+// 6. Math.trunc(): Simply cuts off the decimal part (no rounding)
+
+console.log(Math.trunc(4.9));  // 4
+console.log(Math.trunc(4.1));  // 4
+console.log(Math.trunc(-4.9)); // -4 (just drops .9)
