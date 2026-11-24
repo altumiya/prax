@@ -31,3 +31,13 @@ console.log(Math.floor(-4.1)); // -5 (further below 0 is lower)
 console.log(Math.trunc(4.9));  // 4
 console.log(Math.trunc(4.1));  // 4
 console.log(Math.trunc(-4.9)); // -4 (just drops .9)
+
+// 1. Math.max(): Returns the highest number
+
+console.log(Math.max(10, 25, 5, 40));   // 40
+console.log(Math.max(-10, -25, -5));    // -5 (closest to 0 is largest)
+
+// 2. Math.min(): Returns the lowest number
+
+console.log(Math.min(10, 25, 5, 40));   // 5
+console.log(Math.min(-10, -25, -5));    // -25
