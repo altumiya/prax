@@ -1,3 +1,4 @@
+// Array are resizeable and can contain mix datatypes, create shallow copies
 const array = [1,2,3,4,5]
 const newarr = array.join()
 
