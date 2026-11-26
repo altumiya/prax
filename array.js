@@ -26,7 +26,7 @@ console.log(array3) //splice(start, deleteCount, item1, item2, ...)
 
 const marvel = ["spider", "iron", "hulk"]
 const dc = ["bat", "supe","joke"]
-//marvel.push(dc)
+//marvel.push(dc) // array in array i.e [marvel[dc]] same in concat so use spread op
 //const all = marvel.concat(dc)
 const all = [...marvel, ...dc]
 console.log(marvel);
