@@ -236,7 +236,7 @@ Object.keys(userProfile1).forEach(key => {
 //Key: age
 //Key: role
 
-// Object Destructuring
+// Object Destructuring .{} is also used in prorps to destr
 //Instead of accessing properties one by one (e.g., user.name, user.age), you can unpack them directly.
 
 const userDetails = {
@@ -265,6 +265,7 @@ const { brand: manufacturer, model, ram = "16GB" } = laptop;
 
 console.log(manufacturer); // Output: "Dell"
 console.log(ram);          // Output: "16GB"
+console.log(model)         // XPS 15
 
 let obj11 = {
     name:"altaf",
