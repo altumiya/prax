@@ -40,9 +40,11 @@ console.log(user2);
 //  city: "Mumbai"
 //}
 
+const mysym = Symbol("key12")
 const jsuser = {
     name: "altaf",
     "full name": "altaf hussain",
+    [mysym] : "key1",
     age: 31,
     location: "mumbai",
     isloggedin: false,
@@ -56,6 +58,10 @@ console.log(jsuser["age"]);
 
 // "altaf hussain" — [] is the only way to access keys with spaces; dot notation (jsuser."full name") throws a SyntaxError
 console.log(jsuser["full name"]);
+// Use [] WITHOUT quotes to access a Symbol property (quotes like jsuser["mysym"] look for a string key and return undefined)
+console.log(jsuser[mysym]) // key1
+console.log(typeof mysym) // symbol
+console.log(typeof jsuser[mysym]) //string
 
 // If you store a key name in a variable, omit the quotes inside []:
 const key = "location";
