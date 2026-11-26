@@ -181,7 +181,7 @@ structuredClone() eliminates all of those issues natively.
 const obj1 = {1: "a", 2:"b"}
 const obj2 = {3: "c", 4:"d"}
 //const obj3 = {obj1, obj2}
-var obj3 = Object.assign({},obj1,obj2)
+var obj3 = Object.assign({},obj1,obj2) // {} is assigned as target else when not given the other object is just concating to obj1 or treated as target
 var obj3 = { ...obj1, ...obj2 };
 console.log(obj3) //{ '1': 'a', '2': 'b', '3': 'c', '4': 'd' }
 
