@@ -1,20 +1,20 @@
 const array = [1,2,3,4,5]
 const newarr = array.join()
 
-console.log(array);
-console.log(newarr)
-array.push(6,7)
-console.log(array);
+console.log(array); //[1,2,3,4,5]
+console.log(newarr) // 1,2,3,4,5
+array.push(6,7) 
+console.log(array); //[1, 2, 3, 4,5, 6, 7]
 array.pop()
-console.log(array);
+console.log(array); // [ 1, 2, 3, 4, 5, 6 ]
 array.unshift(9)
 
-console.log(array);
+console.log(array); //[9, 1, 2, 3,4, 5, 6]
 array.shift(9)
-console.log(array);
+console.log(array); // [ 1, 2, 3, 4, 5, 6 ]
 
-console.log(array.slice(1, 4)); //slice(start, end)
-console.log(array.includes(5));
+console.log(array.slice(1, 4)); //slice(start, end) [ 2, 3, 4 ]
+console.log(array.includes(5));// true
 
 const array3 = [1,2,3,4,5]
 array3.splice(2, 2, 99, 100);
