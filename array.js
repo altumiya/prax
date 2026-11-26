@@ -26,8 +26,8 @@ console.log(array3) //splice(start, deleteCount, item1, item2, ...)
 
 const marvel = ["spider", "iron", "hulk"]
 const dc = ["bat", "supe","joke"]
-//marvel.push(dc) // array in array i.e [marvel[dc]] same in concat so use spread op
-//const all = marvel.concat(dc)
+//marvel.push(dc) // array in array i.e [marvel[dc]]  so use spread op
+//const all = marvel.concat(dc) return new single array same as spread op
 const all = [...marvel, ...dc]
 console.log(marvel);
 console.log(all);
@@ -36,14 +36,15 @@ const array1=[1,2,3,[4,5],6,7,[8,9]]
 const array2=array1.flat(Infinity)
 console.log(array2)
 
-console.log(Array.from("Altaf")) //to split and make array
-console.log(Array.isArray("Altaf"))  //boolean
-console.log(Array.from({name:"Altaf"})) //{ name: "Altaf" } has neither an iterator nor a length property, so Array.from() cannot determine how many elements to create. It defaults to an empty array: [].
+console.log(Array.from("Altaf")) //to split and make array ['A','l','t','a','f']
+console.log(Array.isArray("Altaf"))  //boolean false
+console.log(Array.from({name:"Altaf"})) //{ name: "Altaf" } has neither an iterator nor a length property, so Array.from() 
+                                        //cannot determine how many elements to create. It defaults to an empty array: [].
 
 const score1 = 100
 const score2 = 200
 const score3 = 300
-console.log(Array.of(score1,score2,score3))
+console.log(Array.of(score1,score2,score3)) // [100,200,300]
 
 // Array Destructuring
 //Array destructuring pulls out values based on their position (index) in the array.
