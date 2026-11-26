@@ -62,7 +62,19 @@ console.log(jsuser["full name"]);
 console.log(jsuser[mysym]) // key1
 console.log(typeof mysym) // symbol
 console.log(typeof jsuser[mysym]) //string
-
+console.log(Object.entries(jsuser))//[
+//   [ 'name', 'altaf' ],
+//   [ 'full name', 'altaf hussain' ],
+//   [ 'age', 31 ],
+//   [ 'location', 'mumbai' ],
+//   [ 'isloggedin', false ],
+//   [ 'days', [ 'monday', 'tues', 'weds' ] ],
+//   [ 'greeting', [Function (anonymous)] ],
+//   [ 'greeting2', [Function (anonymous)] ]
+// ]
+console.log(jsuser.hasOwnProperty("isloggedin")); // true hasOwnProperty() checks whether the key exists, regardless of its value.
+// Object.hasOwn(obj, "key") is preferred over obj.hasOwnProperty("key") because it works even on objects created with Object.create(null)
+console.log(Object.hasOwn(jsuser, "age")); // true
 // If you store a key name in a variable, omit the quotes inside []:
 const key = "location";
 console.log(jsuser[key]); // "mumbai" (evaluates the variable `key`)
