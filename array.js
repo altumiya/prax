@@ -17,6 +17,9 @@ console.log(array); // [ 1, 2, 3, 4, 5, 6 ]
 console.log(array.slice(1, 4)); //slice(start, end) [ 2, 3, 4 ]
 console.log(array.includes(5));// true
 
+const myarr2 = new Array(1,2,3,4,5)
+console.log(myarr2) // convert it into array [] [ 1, 2, 3, 4, 5 ]
+
 const array3 = [1,2,3,4,5]
 array3.splice(2, 2, 99, 100);
 console.log(array3) //splice(start, deleteCount, item1, item2, ...)
