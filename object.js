@@ -67,6 +67,20 @@ console.log(typeof jsuser[mysym]) //string
 const key = "location";
 console.log(jsuser[key]); // "mumbai" (evaluates the variable `key`)
 
+// function example 
+jsuser.greeting = function(){
+   console.log("hello altumiya")
+}
+console.log(jsuser.greeting()) // hello altumiya with undefined(because no return) without () it will return reference of that function
+// jsuser.greeting = function() {
+//     return "hello altumiya";
+// };
+// console.log(jsuser.greeting()); // Output: hello altumiya
+jsuser.greeting2 = function(){
+   return `hello ${this.name}`
+}
+console.log(jsuser.greeting2()) //hello altaf
+
 //Example of Object.freeze()
 const frozenUser = {
   name: "Altaf",
