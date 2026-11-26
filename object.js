@@ -40,6 +40,27 @@ console.log(user2);
 //  city: "Mumbai"
 //}
 
+const jsuser = {
+    name: "altaf",
+    "full name": "altaf hussain",
+    age: 31,
+    location: "mumbai",
+    isloggedin: false,
+    days: ["monday", "tues", "weds"]
+};
+
+console.log(jsuser.age); // 31 — dot notation automatically treats `age` as a string key
+
+// 31 — when using [], the key must be a string ("") or (''); without quotes, JS treats it as a variable
+console.log(jsuser["age"]); 
+
+// "altaf hussain" — [] is the only way to access keys with spaces; dot notation (jsuser."full name") throws a SyntaxError
+console.log(jsuser["full name"]);
+
+// If you store a key name in a variable, omit the quotes inside []:
+const key = "location";
+console.log(jsuser[key]); // "mumbai" (evaluates the variable `key`)
+
 //Example of Object.freeze()
 const frozenUser = {
   name: "Altaf",
