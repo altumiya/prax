@@ -2455,3 +2455,211 @@ I should think:
 3. The microtask is processed after synchronous execution.
 
 */
+/*
+DAY 4 — SCOPE, HOISTING, TDZ & CLOSURES
+
+1. VAR, LET AND CONST
+var:
+- Function-scoped.
+- Can be redeclared.
+- Can be reassigned.
+- Does not respect block scope.
+
+let:
+- Block-scoped.
+- Can be reassigned.
+- Cannot be redeclared in the same scope.
+
+const:
+- Block-scoped.
+- Cannot be reassigned.
+- Must be initialized when declared.
+
+Best practice:
+- Use const by default.
+- Use let when reassignment is required.
+- Avoid var in modern JavaScript.
+
+2. SCOPE
+
+Scope determines where a variable can be accessed.
+
+Types of scope:
+- Global scope
+- Function scope
+- Block scope
+
+let and const respect block scope.
+var ignores block scope but respects function scope.
+
+Example:
+
+var a = 10;
+
+if (true) {
+    var a = 20;
+    let b = 30;
+}
+
+console.log(a); // 20
+console.log(b); // ReferenceError
+
+Reason:
+- var is not restricted to the if block.
+- let is restricted to the block in which it is declared.
+
+3. HOISTING
+
+Hoisting is JavaScript's behavior of processing declarations
+during the creation of an execution context before executing
+the code.
+
+var:
+- Hoisted.
+- Initialized with undefined.
+
+let and const:
+- Hoisted but not initialized immediately.
+- Cannot be accessed before initialization.
+
+Example:
+
+console.log(a); // undefined
+var a = 10;
+
+JavaScript behaves conceptually like:
+
+var a;
+console.log(a);
+a = 10;
+
+4. TEMPORAL DEAD ZONE (TDZ)
+The TDZ is the period between entering a scope and initializing
+a let or const variable.
+
+Accessing the variable during this period causes a ReferenceError.
+
+Example:
+
+console.log(a); // ReferenceError
+let a = 10;
+
+5. FUNCTION HOISTING
+Function declarations can be called before their declaration.
+
+Example:
+
+greet();
+
+function greet() {
+    console.log("Hello");
+}
+
+// Output: Hello
+
+Function declarations are available before their position
+in the code during execution context creation.
+
+However, function expressions assigned to let or const cannot
+be accessed before initialization.
+
+6. LEXICAL SCOPE
+Lexical scope means a function can access variables from
+the scope in which it was physically written.
+
+An inner function can access:
+1. Its own variables.
+2. Variables from its outer scope.
+3. Global variables.
+
+Example:
+
+const name = "Altaf";
+
+function outer() {
+    let city = "Mumbai";
+
+    function inner() {
+        console.log(name);
+        console.log(city);
+    }
+
+    inner();
+}
+
+7. CLOSURES
+A closure occurs when a function retains access to variables
+from its surrounding lexical scope, even after the outer
+function has finished executing.
+
+Example:
+
+function outer() {
+    let count = 0;
+
+    return function () {
+        count++;
+        console.log(count);
+    };
+}
+
+const counter = outer();
+
+counter(); // 1
+counter(); // 2
+counter(); // 3
+
+Why does this work?
+
+- outer() executes once.
+- count is initialized to 0.
+- The inner function is returned.
+- The inner function retains access to count.
+- count is not reset every time counter() is called.
+
+Closures are useful for:
+- Preserving state.
+- Data privacy.
+- Event handlers.
+- Callbacks.
+- React hooks and state-related logic.
+
+8. VARIABLE ACCESS & FUNCTION SCOPE
+Variables declared inside a function cannot normally be
+accessed outside that function.
+
+Example:
+
+function createUser() {
+    let username = "Altaf";
+    return username;
+}
+
+const user = createUser();
+
+console.log(user); // Altaf
+
+console.log(username); // ReferenceError
+
+Reason:
+username belongs to createUser's local scope.
+
+9. COMMON INTERVIEW MISTAKES
+- Thinking var respects block scope.
+- Confusing undefined with ReferenceError.
+- Thinking hoisting literally moves code.
+- Forgetting that let and const have a TDZ.
+- Assuming closures create a new variable every time.
+- Forgetting that a closure can preserve state.
+- Confusing function scope with block scope.
+
+10. INTERVIEW ANSWER — CLOSURE
+A closure is a function that retains access to variables
+from its surrounding lexical scope, even after the outer
+function has finished executing.
+
+Closures are useful for maintaining state, data privacy,
+callbacks, and event handling.
+
+
+*/
